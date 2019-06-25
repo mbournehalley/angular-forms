@@ -1,6 +1,6 @@
 <div class="container">
   <h2>User Settings</h2>
-  <form #form="ngForm">
+  <form #form="ngForm" ngNativeValidate>
     <div class="form-group">
       <label for="name">Name</label>
       <input
@@ -9,7 +9,15 @@
         class="form-control"
         placeholder="Name"
         [(ngModel)]="userSettings.name"
+        required
+        #nameField="ngModel"
       />
+      <div
+        [hidden]="nameField.valid || nameField.untouched"
+        class="alert alert-danger"
+      >
+        Enter a name
+      </div>
     </div>
     <div class="form-check form-group">
       <input
