@@ -6,10 +6,11 @@ import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { UserSettingsFormComponent } from "./user-settings-form/user-settings-form.component";
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [AppComponent, UserSettingsFormComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ButtonsModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })

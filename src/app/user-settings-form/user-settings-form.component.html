@@ -21,6 +21,17 @@
         Enter a name
       </div>
     </div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      [(ngModel)]="singleModel"
+      btnCheckbox
+      btnCheckboxTrue="On"
+      btnCheckboxFalse="Off"
+      name="singleModel"
+    >
+      {{ singleModel }}
+    </button>
     <div class="form-check form-group">
       <input
         class="form-check-input"
@@ -35,36 +46,37 @@
     </div>
     <p>User Interface Style</p>
     <div class="form-group">
-      <div class="form-check">
-        <input
-          type="radio"
-          class="form-check-input"
+      <div class="btn-group">
+        <label
+          class="btn btn-primary"
           id="lightInterface"
           name="interfaceStyle"
-          value="light"
-          checked
+          btnRadio="Light"
+          tabindex="0"
+          role="button"
           [(ngModel)]="userSettings.interfaceStyle"
-        /><label for="lightInterface" class="form-check-label">Light</label>
-      </div>
-      <div class="form-check">
-        <input
-          type="radio"
-          class="form-check-input"
+        >
+          Light
+        </label>
+        <label
+          btnRadio="Medium"
+          class="btn btn-primary"
           id="MediumInterface"
           name="interfaceStyle"
           value="medium"
           [(ngModel)]="userSettings.interfaceStyle"
-        /><label for="MediumInterface" class="form-check-label">Medium</label>
-      </div>
-      <div class="form-check">
-        <input
-          type="radio"
-          class="form-check-input"
+        >
+          Medium
+        </label>
+        <label
+          btnRadio="Dark"
+          class="btn btn-primary"
           id="DarkInterface"
           name="interfaceStyle"
-          value="dark"
           [(ngModel)]="userSettings.interfaceStyle"
-        /><label for="DarkInterface" class="form-check-label">Dark</label>
+        >
+          Dark
+        </label>
       </div>
     </div>
     <div class="form-group">

@@ -20,6 +20,7 @@ export class UserSettingsFormComponent implements OnInit {
   userSettings: UserSettings = { ...this.orignalUserSettings };
   postError = false;
   postErrorMessage = "";
+  singleModel = "On";
   subscriptionTypes: Observable<string[]>;
 
   constructor(private dataService: DataService) {}
